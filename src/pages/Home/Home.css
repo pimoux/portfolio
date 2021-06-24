@@ -1,0 +1,35 @@
+body{
+    background-color: #1F2833;
+}
+
+.mainTitle{
+    color: #66FCF1;
+    text-align:center;
+}
+
+.imageMainPage{
+    width: 40%;
+    height: 40%;
+}
+
+.presentation{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem;
+}
+
+.text-presentation{
+    color: #66FCF1;
+    font-weight: 800;
+}
+
+.paragraph-presentation{
+    color: #C5C6C7;
+}
+
+.presentation-text-container{
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+}
