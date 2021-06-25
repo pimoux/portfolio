@@ -33,3 +33,23 @@ body{
     flex-direction: column;
     width: 30%;
 }
+
+
+
+/* MOI */
+
+
+.titleAbout{
+    color: #45A29E;
+    text-decoration: underline;
+    margin-left: 2rem;
+}
+
+.paragraphAbout, .linkAbout{
+    color: #C5C6C7;
+    text-align: justify;
+}
+
+.paragraphAbout{
+    margin: 2rem;
+}
