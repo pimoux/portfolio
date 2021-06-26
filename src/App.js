@@ -21,7 +21,7 @@ function App() {
                         <Route exact path="/contact" component={Contact} />
                         <Route exact path="/about" component={About} />
                         <Route exact path="/portfolio" component={Portfolio} />
-                        <Route path="/project/:id" component={ProjectDetails} />
+                        <Route path="/portfolio/project/:id" children={<ProjectDetails />} />
                         <Route exact path="/">
                             <Redirect to="/home" />
                         </Route>

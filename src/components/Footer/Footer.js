@@ -25,7 +25,7 @@ const Footer = () => {
           <h5 className="titleFooter">Reseaux sociaux</h5>
             {socialMedias.map((media, index) => {
               return (
-                <a href={media.path} className='mediaLink'>
+                <a href={media.path} className='mediaLink' key={index}>
                   {media.name}
                 </a>
               );
@@ -36,7 +36,7 @@ const Footer = () => {
           <ul className="iconsList">
             {links.map((link, index) => {
               return (
-                <li>
+                <li key={index}>
                   <NavLink exact to={link.path} className='FooterNavigation'>
                     {link.title}
                   </NavLink>
