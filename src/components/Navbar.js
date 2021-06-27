@@ -2,8 +2,7 @@ import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTimes, faBars, faHome } from "@fortawesome/free-solid-svg-icons";
-import links from "../../utils/links";
-import "./Navbar.css";
+import links from "../utils/links";
 
 function Navbar() {
     const [click, setClick] = useState(false);

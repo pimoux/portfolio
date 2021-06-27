@@ -9,12 +9,13 @@ const ProjectDetails = () => {
 
   return (
     <div className="project-details">
-      <div className="project-details-header">
-        <NavLink exact to="/portfolio">
-          Retour
-        </NavLink>
-        <h1 className="mainTitle ">Projet "{project.title}"</h1>
-      </div>
+      <NavLink exact to="/portfolio" className="quit-details">
+        Retour
+      </NavLink>
+      <h1 className="mainTitle">Projet "{project.title}"</h1>
+      <img src={project.image} alt="" className="project-details-image"/>
+      <a href={project.codeUrl} className="project-details-link" target="_blank" rel="noreferrer">Code</a>
+      <a href={project.demoUrl} className="project-details-link" target="_blank" rel="noreferrer">Résultat</a>
     </div>
   );
 };

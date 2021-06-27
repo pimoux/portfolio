@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import ProjectItem from "../components/ProjectItem/ProjectItem";
+import ProjectItem from "../components/ProjectItem";
 import projectList from "../utils/projectList";
 
 const Portfolio = () => {
@@ -26,7 +26,7 @@ const Portfolio = () => {
   return (
     <div>
       <h1 className="mainTitle">PORTFOLIO</h1>
-      <p className="project-disclaimer">Je tiens a préciser que les projets que je vous montre ont tous été réalisé durant mon temps libre, en parallele de mes études. </p>
+      <p className="project-disclaimer">Je tiens a préciser que les projets que je vous montre ont tous été réalisé durant mon temps libre, en parallèle de mes études. </p>
       <div className="search-project">
         <input
           type="text"

@@ -1,14 +1,14 @@
 import {
     BrowserRouter as Router, Route, Switch, Redirect
 } from "react-router-dom";
-import Home from "./pages/Home/Home";
+import Home from "./pages/Home";
 import Contact from "./pages/Contact";
 import About from "./pages/About";
 import Portfolio from "./pages/Portfolio";
 import ProjectDetails from "./pages/ProjectDetails";
-import Navbar from "./components/Navbar/Navbar";
-import Footer from "./components/Footer/Footer";
-
+import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
+import './style.css';
 
 function App() {
     return (

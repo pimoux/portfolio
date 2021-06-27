@@ -1,7 +1,6 @@
 import React from "react";
-import "./Footer.css";
 import { NavLink } from "react-router-dom";
-import links from "../../utils/links";
+import links from "../utils/links";
 const Footer = () => {
   const socialMedias = [
     {
@@ -22,7 +21,7 @@ const Footer = () => {
     <footer className="footer">
       <div className="informationsFooter">
         <div className="icons">
-          <h5 className="titleFooter">Reseaux sociaux</h5>
+          <h5 className="titleFooter">Réseaux sociaux</h5>
             {socialMedias.map((media, index) => {
               return (
                 <a href={media.path} className='mediaLink' key={index}>
