@@ -1,5 +1,8 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap");
+
 body {
   background-color: #1f2833;
+  font-family: "Roboto Slab", Serif;
 }
 
 .mainTitle {
@@ -91,7 +94,7 @@ body {
   display: flex;
   flex-direction: column;
   width: 100%;
-  height: 250px;
+  height: 210px;
   border-top: 1px solid #c5c6c7;
   background-color: #0b0c10;
 }
@@ -138,6 +141,7 @@ body {
 .copyright {
   text-align: center;
   color: #66fcf1;
+  background-color: #0b0c10;
 }
 
 /* ACCUEIL */
@@ -222,6 +226,10 @@ q {
   text-align: center;
   color: #66fcf1;
 }
+.search-project input[type="text"]{
+  width: 300px;
+  background: url('assets/images/loupe.svg') no-repeat right #0b0c10;
+}
 
 /* PORTFOLIO CARTE */
 
@@ -275,6 +283,7 @@ q {
 .project-details-image {
   width: 50%;
   height: 50%;
+  border: 2px solid #0b0c10;
 }
 
 .project-details-link {
@@ -287,17 +296,121 @@ q {
   cursor: pointer;
   margin: 20px 0px;
   transition: 0.4s ease-out;
+  font-size: 1.1em;
 }
 
-.project-details-link:hover {
+.project-details-link:hover,
+.contact-form-submit:hover {
   color: #0b0c10;
   background-color: #66fcf1;
   border: 2px solid #0b0c10;
 }
 
-@media screen and (max-width: 768px) {
+/* CONTACT */
 
-    /* NAVBAR */
+.contact {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  border: 2px solid #c5c6c7;
+}
+
+input[type="text"],
+input[type="email"] {
+  height: 30px;
+  border: none;
+}
+
+input[type="text"],
+input[type="email"],
+.contact-form textarea {
+  margin: 1rem 0rem 0rem 0rem;
+  font-family: "Roboto Slab", Serif;
+  background-color: #0b0c10;
+  border-radius: 10px;
+  width: 500px;
+  font-size: 1.25em;
+  color: #66fcf1;
+  outline: none;
+  padding: 0.5rem;
+}
+
+.contact-form textarea {
+  height: 100px;
+}
+
+.contact-form label {
+  margin-top: 1rem;
+  align-self: start;
+  color: #66fcf1;
+}
+
+.alert-danger {
+  margin: 0;
+  color: red;
+  align-self: start;
+}
+
+.alert-success {
+  border: 2px solid #0b0c10;
+  padding: 0rem 4rem;
+  margin-bottom: 1rem;
+  display: none;
+}
+
+.text-success {
+  color: #00ff00;
+}
+
+.contact-links{
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+}
+
+.contact-form-submit{
+  color: #66fcf1;
+  background-color: #0b0c10;
+  border: 2px solid #45a29e;
+  padding: 1rem 4rem;
+  text-decoration: none;
+  border-radius: 40px;
+  cursor: pointer;
+  margin-top: 40px;
+  transition: 0.4s ease-out;
+  font-size: 1.1em;
+}
+
+/* CONTACT ITEMS */
+
+.contact-icon{
+  margin-right: 2rem;
+}
+
+.contact-item {
+  padding: 0rem 2rem;
+  background-color: #0b0c10;
+  color: #66fcf1;
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  border-radius: 8px;
+  margin-bottom: 2rem;
+  font-size: 2em;
+}
+
+@media screen and (max-width: 768px) {
+  /* NAVBAR */
 
   .nav-menu {
     display: flex;
@@ -349,19 +462,33 @@ q {
 
   /* ACCUEIL */
 
-  .presentation{
-      text-align: center;
+  .presentation {
+    text-align: center;
   }
 
-  .presentation-text-image-container{
-      display: flex;
-      flex-direction: column;
-      align-items: center;
+  .presentation-text-image-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 
-  .presentation-text-container{
-      display: flex;
-      justify-content: center;
-      width: 100%;
+  .presentation-text-container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+
+  /* CONTACT */
+
+  .contact-links{
+    flex-direction: column;
+    width: auto;
+  }
+
+  /* IMG */
+
+  .resize{
+    width: 100%;
+    height: 100%;
   }
 }

@@ -24,7 +24,7 @@ const projectList = [
     {
         id: 3,
         title: "Carte des Etats Unis",
-        description: "4eme projet du FreeCodeCamp sur la visualisation de données, 2 appels API + utilisation de D3 pour pouvoir créer la carte des Etats Unis et y afficher le pourcentage d'adultes ayant leur bac dans chaque région.",
+        description: "4ème projet du FreeCodeCamp sur la visualisation de données, 2 appels API + utilisation de D3 pour pouvoir créer la carte des États Unis et y afficher le pourcentage d'adultes ayant leur bac dans chaque région.",
         image: choropleth,
         codeUrl: "https://codepen.io/pimoux/pen/mdVBLJx",
         demoUrl: "https://codepen.io/pimoux/full/mdVBLJx"

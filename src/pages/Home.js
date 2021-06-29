@@ -23,7 +23,7 @@ const Home = () => {
             fullstack ou encore d'intégration web
           </p>
         </div>
-        <img src={imageHome} alt="" className="imageMainPage" />
+        <img src={imageHome} alt="" className="imageMainPage resize" />
       </div>
     </div>
   );

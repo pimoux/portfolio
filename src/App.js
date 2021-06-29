@@ -9,6 +9,7 @@ import ProjectDetails from "./pages/ProjectDetails";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import './style.css';
+import Blog from "./pages/Blog";
 
 function App() {
     return (
@@ -21,6 +22,7 @@ function App() {
                         <Route exact path="/contact" component={Contact} />
                         <Route exact path="/about" component={About} />
                         <Route exact path="/portfolio" component={Portfolio} />
+                        <Route exact path="/blog" component={Blog} />
                         <Route path="/portfolio/project/:id" children={<ProjectDetails />} />
                         <Route exact path="/">
                             <Redirect to="/home" />
