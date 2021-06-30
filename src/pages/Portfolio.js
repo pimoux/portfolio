@@ -5,6 +5,7 @@ import projectList from "../utils/projectList";
 const Portfolio = () => {
   const [projects, setProjects] = useState({ data: [] });
   const [filteredProjects, setFilteredProjects] = useState([]);
+  const [error, setError] = useState({status: false, message: null})
   const [search, setSearch] = useState("");
   
   const handleChange = (e) => {
@@ -22,6 +23,12 @@ const Portfolio = () => {
       )
     );
   }, [search, projects]);
+
+  useEffect(() => {
+      filteredProjects.length < 1 ?
+      setError({status: true, message: 'Aucun projet trouvé :('}) :
+      setError({status: false, message: null})
+  }, [filteredProjects])
 
   return (
     <div>
@@ -46,6 +53,7 @@ const Portfolio = () => {
               />
             );
           })}
+          {error.status && <p className="project-no-found">{error.message}</p>}
       </div>
     </div>
   );

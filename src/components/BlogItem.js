@@ -1,10 +1,11 @@
 import React from 'react'
 
-const BlogItem = ({fullName, createdAt, content}) => {
+const BlogItem = ({title, createdAt, children}) => {
     return (
-        <div>
-            
-        </div>
+        <article className="blog-item">
+            <h1 className="blog-title">{title} - {createdAt}</h1>
+            <p className="blog-content">{children}</p>
+        </article>
     )
 }
 

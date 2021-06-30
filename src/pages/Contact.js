@@ -40,21 +40,27 @@ const Contact = () => {
                 <input type='email' {...register('email', {required: "Une adresse mail est requise"})} />
                 {errors.email && <p className="alert-danger">{errors.email.message}</p>}
                 <label htmlFor="message">Message</label>
-                <textarea {...register('message', {required: "Ce champ ne doit pas être vide"})}></textarea>
+                <textarea {...register('message', {required: "Un message est requis"})}></textarea>
                 {errors.message && <p className="alert-danger">{errors.message.message}</p>}
                 <input type="submit" className="contact-form-submit" value="Envoyer" />
             </form>
             <h1 className="mainTitle">Réseaux sociaux</h1>
             <div className='contact-links'>
-                <ContactItem title="instagram">
-                    <FontAwesomeIcon icon={faInstagram} className="contact-icon"/>
-                </ContactItem>
-                <ContactItem title="VK">
-                    <FontAwesomeIcon icon={faVk} className="contact-icon"/>
-                </ContactItem>
-                <ContactItem title="LinkedIn">
-                    <FontAwesomeIcon icon={faLinkedin} className="contact-icon"/>
-                </ContactItem>
+                <a href="https://www.instagram.com/luka.vmt/" className="contact-link" target="_blank" rel="noreferrer">
+                    <ContactItem title="instagram">
+                        <FontAwesomeIcon icon={faInstagram} className="contact-icon"/>
+                    </ContactItem>
+                </a>
+                <a href="https://vk.com/pimoux" className="contact-link" target="_blank" rel="noreferrer">
+                    <ContactItem title="VK">
+                        <FontAwesomeIcon icon={faVk} className="contact-icon"/>
+                    </ContactItem>
+                </a>
+                <a href="https://www.linkedin.com/in/luka-vouillemont-6051761b8/" className="contact-link" target="_blank" rel="noreferrer">
+                    <ContactItem title="LinkedIn">
+                        <FontAwesomeIcon icon={faLinkedin} className="contact-icon"/>
+                    </ContactItem>
+                </a>
             </div>
         </div>
     )

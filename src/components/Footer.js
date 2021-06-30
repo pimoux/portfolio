@@ -5,11 +5,11 @@ const Footer = () => {
   const socialMedias = [
     {
       name: 'Instagram',
-      path: 'https://www.instagram.com/?hl=fr'
+      path: 'https://www.instagram.com/luka.vmt/'
     },
     {
       name: 'VK',
-      path: 'https://vk.com/?lang=fr'
+      path: 'https://vk.com/pimoux'
     },
     {
       name: 'LinkedIn',
@@ -24,7 +24,7 @@ const Footer = () => {
           <h5 className="titleFooter">Réseaux sociaux</h5>
             {socialMedias.map((media, index) => {
               return (
-                <a href={media.path} className='mediaLink' key={index}>
+                <a href={media.path} className='mediaLink' key={index} target="_blank" rel="noreferrer">
                   {media.name}
                 </a>
               );
