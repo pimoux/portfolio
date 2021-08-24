@@ -15,7 +15,6 @@ function App() {
             <Router>
                 <Navbar />
                 <Switch>
-                    <div className="pages">
                         <Route exact path="/home" component={Home} />
                         <Route exact path="/contact" component={Contact} />
                         <Route exact path="/about" component={About} />
@@ -24,7 +23,6 @@ function App() {
                         <Route exact path="/">
                             <Redirect to="/home" />
                         </Route>
-                    </div>
                 </Switch>
                 <Footer />
             </Router>

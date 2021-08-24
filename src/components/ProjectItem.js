@@ -8,9 +8,11 @@ const ProjectItem = ({ image, title, description, href }) => {
         <p className="text-turquoise-dark font-extrabold my-3 mx-5 text-2xl text-center">
           {title}
         </p>
-        <p className="text-grayish-light text-justify my-3 mx-5">
-          {description}
-        </p>
+          <div className="text-justify my-3 mx-5">
+              {description && description.map((line, i) => {
+                  return (<p className="text-grayish-light" key={i}>{line}</p>)
+              })}
+          </div>
       </a>
     </div>
   );

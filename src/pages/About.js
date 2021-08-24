@@ -1,8 +1,10 @@
 import React from "react";
+import SkillIcon from "../components/SkillIcon";
+import skills from "../utils/skillIcons";
 
 const About = () => {
   return (
-    <div>
+    <div className="p-8 pt-2">
       <h1 className="mainTitle">MOI</h1>
       <h3 className="title-about">Qui suis-je ?</h3>
       <p className="paragraph-about">
@@ -55,12 +57,9 @@ const About = () => {
       </p>
 
       <h3 className="title-about">Mes compétences</h3>
-      <p className="paragraph-about">Langages: HTML, CSS, JS, PHP, MySQL, Python</p>
-      <p className="paragraph-about">Frontend: React, jQuery, D3, TailwindCSS, SASS</p>
-      <p className="paragraph-about">Backend: Symfony, Node, Express, JWT</p>
-      <p className="paragraph-about">
-        Environnement de travail: Windows, MacOS, VS Code, PHPStorm, Git
-      </p>
+        <div className="flex flex-wrap justify-center">
+            {skills.map((skill, i) => <SkillIcon icon={skill} key={i}/>)}
+        </div>
       <h3 className="title-about">Expériences</h3>
       <p className="paragraph-about">
         Mars-Juin 2021: Stage chez &nbsp;

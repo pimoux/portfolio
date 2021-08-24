@@ -3,7 +3,7 @@ import ProjectItem from "../components/ProjectItem";
 import projectList from "../utils/projectList";
 
 const Portfolio = () => {
-    const [projects, setProjects] = useState({ data: [] });
+    const [projects] = useState({ data: projectList });
     const [filteredProjects, setFilteredProjects] = useState({
         data: [],
         errorMessage: null,
@@ -15,28 +15,27 @@ const Portfolio = () => {
     };
 
     useEffect(() => {
-        setProjects({ data: projectList });
-    }, []);
-
-    useEffect(() => {
         setFilteredProjects({
             data: projects.data.filter((project) =>
                 project.title.toLowerCase().includes(search)
             ),
-            errorMessage:
-                filteredProjects.data.length < 1
-                    ? "Aucun projet trouvé :("
-                    : null,
+            errorMessage: filteredProjects.errorMessage
         });
-    }, [search, projects, filteredProjects.data]);
+    }, [search, projects, filteredProjects.errorMessage]);
+
+    useEffect(() => {
+        const error = filteredProjects.data.length < 1
+        ? "Aucun projet trouvé :("
+        : null;
+        setFilteredProjects({
+            data: filteredProjects.data,
+            errorMessage: error,
+        })
+    }, [filteredProjects.data])
 
     return (
         <div>
             <h1 className="mainTitle">PORTFOLIO</h1>
-            <p className="text-turquoise text-center">
-                Je tiens a préciser que les projets que je vous montre ont tous
-                été réalisé durant mon temps libre, en parallèle de mes études.{" "}
-            </p>
             <div className="w-full flex justify-center">
                 <input
                     id="search"
