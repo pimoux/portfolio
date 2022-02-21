@@ -14,7 +14,7 @@ const skills = [
     {
         icon: faPhp,
         className: "text-indigo-500 px-8 skill-icon",
-        rate: 7
+        rate: 8
     },
     {
         icon: faReact,
@@ -24,7 +24,7 @@ const skills = [
     {
         icon: faSymfony,
         className: "px-8 skill-icon",
-        rate: 6
+        rate: 8
     },
     {
         icon: faNodeJs,
@@ -34,7 +34,7 @@ const skills = [
     {
         icon: faDocker,
         className: "text-turquoise px-8 skill-icon",
-        rate: 4
+        rate: 5
     },
 ]
 
