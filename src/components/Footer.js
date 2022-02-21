@@ -18,7 +18,7 @@ const Footer = () => {
   ]
 
   return (
-    <footer className="flex flex-col w-full h-auto bg-dark border-t-2 border-grayish-light">
+    <footer className="flex flex-col w-full bg-dark border-t-2 border-grayish-light" id="footer">
       <div className="flex justify-around items-start w-full border-b-2 border-grayish">
         <div className="flex flex-col items-center h-full leading-7">
           <h5 className="text-center text-turquoise mt-2">Réseaux sociaux</h5>

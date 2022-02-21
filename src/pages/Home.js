@@ -22,7 +22,7 @@ const Home = () => {
   ];
   const randomQuotation = quotations[Math.floor(Math.random() * quotations.length)]
   return (
-    <div className="flex justify-between flex-col items-center p-8 md:text-center md:text-left">
+    <div className="flex justify-between flex-col items-center p-8 md:text-center md:text-left" id="home">
       <p className="text-center text-turquoise mb-12 sm:mt-0">
         <q>
           {randomQuotation.text}

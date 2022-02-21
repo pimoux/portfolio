@@ -18,6 +18,10 @@ body {
     margin: 0;
 }
 
+#home, #about, #portfolio, #blog {
+    min-height: 62.35vh;
+}
+
 .mainTitle {
     @apply text-turquoise text-3xl text-center my-4;
 }
@@ -36,6 +40,10 @@ body {
 }
 
 /* NAVBAR */
+
+#nav-container, #nav-items {
+    height: 9.65vh;
+}
 
 .nav-menu {
     display: flex;
@@ -106,7 +114,7 @@ body {
         width: 100%;
         border-top: 1px solid var(--lightgray);
         position: absolute;
-        top: 80px;
+        top: 9.65vh;
         left: -110%;
         opacity: 1;
         transition: all 0.5s ease;
@@ -144,7 +152,7 @@ body {
         position: absolute;
         top: 0;
         right: 0;
-        transform: translate(-100%, 60%);
+        transform: translate(-100%, 50%);
         font-size: 1.8rem;
         cursor: pointer;
         color: var(--light-turquoise);

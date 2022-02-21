@@ -4,7 +4,7 @@ import skills from "../utils/skillIcons";
 
 const About = () => {
   return (
-    <div className="p-8 pt-2">
+    <div className="p-8 pt-2" id="about">
       <h1 className="mainTitle">MOI</h1>
       <h3 className="title-about">Qui suis-je ?</h3>
       <p className="paragraph-about">

@@ -3,7 +3,7 @@ import BlogItem from '../components/BlogItem'
 
 const Blog = () => {
     return (
-        <div className="flex flex-col justify-center items-center mb-8">
+        <div className="flex flex-col justify-center items-center mb-8" id="blog">
             <h1 className="mainTitle">BLOG</h1>
             <p className="text-turquoise text-center mt-0">C'est dans cette section que je vous donne des informations sur les mises à jour du portfolio et mon évolution dans le domaine du développement web</p>
             <BlogItem title="Nouveaux projets et changements" createdAt="24 Août 2021">

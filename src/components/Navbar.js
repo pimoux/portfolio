@@ -10,8 +10,8 @@ function Navbar() {
 
     return (
         <>
-            <nav className="h-20 flex justify-center items-center sticky top-0 z-20 bg-dark text-xl">
-                <div className="flex items-center justify-between w-full h-20 max-w-screen-2xl">
+            <nav className="flex justify-center items-center sticky top-0 z-20 bg-dark text-xl" id="nav-container">
+                <div className="flex items-center justify-between w-full max-w-screen-2xl" id="nav-items">
                     <NavLink exact to="/home" className="items-center cursor-pointer no-underline ml-5 text-turquoise hover:text-turquoise-dark text-4xl">
                         <FontAwesomeIcon icon={faHome} />
                     </NavLink>
@@ -33,7 +33,7 @@ function Navbar() {
                             )
                         })}
                     </ul>
-                    <div className="nav-icon mt-2" onClick={handleClick}>
+                    <div className="nav-icon mt-1" onClick={handleClick}>
                         {click ?
                             (<FontAwesomeIcon icon={faTimes} className="hover:text-turquoise-dark"/>) :
                             (<FontAwesomeIcon icon={faBars} className="hover:text-turquoise-dark" />)}

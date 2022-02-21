@@ -34,7 +34,7 @@ const Portfolio = () => {
     }, [filteredProjects.data])
 
     return (
-        <div>
+        <div className="portfolio">
             <h1 className="mainTitle">PORTFOLIO</h1>
             <div className="w-full flex justify-center">
                 <input
