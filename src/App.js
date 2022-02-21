@@ -2,7 +2,6 @@ import {
     BrowserRouter as Router, Route, Switch, Redirect
 } from "react-router-dom";
 import Home from "./pages/Home";
-import Contact from "./pages/Contact";
 import About from "./pages/About";
 import Portfolio from "./pages/Portfolio";
 import Navbar from "./components/Navbar";
@@ -16,7 +15,6 @@ function App() {
                 <Navbar />
                 <Switch>
                         <Route exact path="/home" component={Home} />
-                        <Route exact path="/contact" component={Contact} />
                         <Route exact path="/about" component={About} />
                         <Route exact path="/portfolio" component={Portfolio} />
                         <Route exact path="/blog" component={Blog} />
