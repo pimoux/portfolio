@@ -1,6 +1,9 @@
 import React, { useState, useEffect } from "react";
 import ProjectItem from "../components/ProjectItem";
+import Sorting from "../components/Sorting";
 import projectList from "../utils/projectList";
+import { faCode } from '@fortawesome/free-solid-svg-icons';
+import { faSwift } from "@fortawesome/free-brands-svg-icons";
 
 const Portfolio = () => {
     const [projects] = useState({ data: projectList });
@@ -8,6 +11,18 @@ const Portfolio = () => {
         data: [],
         errorMessage: null,
     });
+    const [sorts, setSorts] = useState([
+        {
+            title: "développement web",
+            icon: faCode,
+            selected: true
+        },
+        {
+            title: "développement iOS",
+            icon: faSwift,
+            selected: false
+        },
+    ])
     const [search, setSearch] = useState("");
 
     const handleChange = (e) => {
@@ -17,11 +32,12 @@ const Portfolio = () => {
     useEffect(() => {
         setFilteredProjects({
             data: projects.data.filter((project) =>
-                project.title.toLowerCase().includes(search)
+                project.title.toLowerCase().includes(search) &&
+                sorts.find(sort => sort.selected).title === project.type
             ),
             errorMessage: filteredProjects.errorMessage
         });
-    }, [search, projects, filteredProjects.errorMessage]);
+    }, [search, projects, filteredProjects.errorMessage, sorts]);
 
     useEffect(() => {
         const error = filteredProjects.data.length < 1
@@ -34,9 +50,9 @@ const Portfolio = () => {
     }, [filteredProjects.data])
 
     return (
-        <div className="portfolio">
+        <div className="portfolio" id="portfolio">
             <h1 className="mainTitle">PORTFOLIO</h1>
-            <div className="w-full flex justify-center">
+            <div className="w-full flex flex-col justify-center items-center">
                 <input
                     id="search"
                     type="text"
@@ -44,6 +60,7 @@ const Portfolio = () => {
                     onChange={handleChange}
                     placeholder="Chercher un projet"
                 />
+                <Sorting sorts={sorts} setSorts={setSorts}/>
             </div>
             <div className="flex flex-wrap justify-center m-4">
                 {filteredProjects.data.map((project, index) => {
