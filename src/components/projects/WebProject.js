@@ -8,7 +8,7 @@ const WebProject = ({ image, title, description, href }) => {
                 <p className="text-turquoise-dark font-extrabold my-3 mx-5 text-2xl text-center">
                     {title}
                 </p>
-                <div className="text-justify my-3 mx-5">
+                <div className="text-left md:text-justify my-3 mx-5">
                     {description && description.map((line, i) => {
                         return (<p className="text-grayish-light" key={i}>{line}</p>)
                     })}
