@@ -36,7 +36,7 @@ const Footer = () => {
             {links.map((link, index) => {
               return (
                 <li key={index} className={index === links.length - 1 ? 'mb-4' : 'my-3'}>
-                  <NavLink exact to={link.path} className='no-underline text-grayish-light'>
+                  <NavLink exact="true" to={link.path} className='no-underline text-grayish-light'>
                     {link.title}
                   </NavLink>
                 </li>
