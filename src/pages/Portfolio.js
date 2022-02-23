@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from "react";
-import ProjectItem from "../components/ProjectItem";
 import Sorting from "../components/Sorting";
 import projectList from "../utils/projectList";
 import { faCode } from '@fortawesome/free-solid-svg-icons';
 import { faSwift } from "@fortawesome/free-brands-svg-icons";
+import WebProject from "../components/projects/WebProject";
+import AppProject from "../components/projects/AppProject";
 
 const Portfolio = () => {
     const [projects] = useState({ data: projectList });
@@ -64,15 +65,23 @@ const Portfolio = () => {
             </div>
             <div className="flex flex-wrap justify-center m-4">
                 {filteredProjects.data.map((project, index) => {
-                    return (
-                        <ProjectItem
+                    return project.type === "développement web" ? (
+                        <WebProject
                             image={project.image}
                             title={project.title}
                             description={project.description}
                             href={project.href}
                             key={index}
                         />
-                    );
+                    ) : (
+                        <AppProject
+                            image={project.image}
+                            title={project.title}
+                            description={project.description}
+                            href={project.href}
+                            key={index}
+                        />
+                    )
                 })}
                 {filteredProjects.errorMessage && (
                     <p className="text-red-600 text-3xl">

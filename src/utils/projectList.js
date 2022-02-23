@@ -5,6 +5,8 @@ import calculator from "../assets/images/calculator.jpg";
 import chatApp from "../assets/images/chatApp.png";
 import todoList from "../assets/images/todoList.png";
 import librappBack from '../assets/images/librapp-back.png';
+import librappFront from '../assets/images/librapp-front.png';
+import carewego from '../assets/images/carewego.png';
 
 const projectList = [
     {
@@ -57,18 +59,18 @@ const projectList = [
     },
     {
         id: 7,
-        title: "Application de voyage",
-        description: ["-Page de profil", "-Feed", "-Grids avec filtres", "-Chat", "-Map + modales", "-Uniquement front"],
-        image: todoList,
-        href: null,
+        title: "Carewego",
+        description: ["-Application de voyage pour handicapés", "-Page de profil", "-Feed", "-Grids avec filtres", "-Chat", "-Map + modales", "-Uniquement front"],
+        image: carewego,
+        href: 'https://github.com/pimoux/carewego',
         type: 'développement iOS'
     },
     {
         id: 8,
-        title: "Application de librairie",
-        description: ["-Authentification + Inscription", "-requêtes API", "-Affichage de listes de données", "-Affichage d'images", "-Accès aux photos de l'utilisateur"],
-        image: todoList,
-        href: null,
+        title: "Librapp",
+        description: ["-Application de librairie", "-Authentification + Inscription", "-requêtes API", "-Affichage de listes de données", "-Affichage d'images", "-Accès aux photos de l'utilisateur"],
+        image: librappFront,
+        href: 'https://github.com/pimoux/librapp-app',
         type: 'développement iOS'
     },
     {
